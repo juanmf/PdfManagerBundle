@@ -1,0 +1,15 @@
+<?xml version="1.0" ?>
+
+<container xmlns="http://symfony.com/schema/dic/services"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <parameters>
+        <parameter key="dd_pdf.pdf_manager.class">DocDigital\Lib\PdfManager\Fpdi\FpdiPdfManager</parameter>
+    </parameters>
+
+    <services>
+        <service id="dd_pdf.pdf_manager" class="%dd_pdf.pdf_manager.class%">
+        </service>
+    </services>
+</container>
