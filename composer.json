@@ -15,7 +15,7 @@
         "docdigital/pdf-manager": "~1.0"
     },
     "autoload": {
-        "psr-0": { "Docdigital\\Bundle\\PdfBundle\\": "" }
+        "psr-0": { "DocDigital\\Bundle\\PdfBundle\\": "" }
     },
     "target-dir": "DocDigital/Bundle/PdfBundle",
     "minimum-stability": "dev"
