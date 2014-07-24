@@ -18,5 +18,5 @@
         "psr-0": { "Docdigital\\Bundle\\PdfBundle\\": "" }
     },
     "target-dir": "DocDigital/Bundle/PdfBundle",
-    "minimum-stability": "dev",
+    "minimum-stability": "dev"
 }
