@@ -12,7 +12,7 @@
     ],
     "require": {
         "php": ">=5.4.0",
-        "docdigital/pdf-manager": "dev-master@dev"
+        "docdigital/pdf-manager": "~1.0"
     },
     "autoload": {
         "psr-0": { "Docdigital\\Bundle\\PdfBundle\\": "" }
