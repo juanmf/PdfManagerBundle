@@ -6,10 +6,15 @@
 
     <parameters>
         <parameter key="dd_pdf.pdf_manager.class">DocDigital\Lib\PdfManager\Fpdi\FpdiPdfManager</parameter>
+        <parameter key="dd_pdf.form.docdigital_pdfinsert.class">DocDigital\Bundle\PdfBundle\Form\Type\PdfInsertType</parameter>
     </parameters>
 
     <services>
         <service id="dd_pdf.pdf_manager" class="%dd_pdf.pdf_manager.class%">
+        </service>
+        
+        <service id="dd_pdf.form.docdigital_pdfinsert" class="%dd_pdf.form.docdigital_pdfinsert.class%">
+            <tag name="form.type" alias="docdigital_pdfinsert" />
         </service>
     </services>
 </container>

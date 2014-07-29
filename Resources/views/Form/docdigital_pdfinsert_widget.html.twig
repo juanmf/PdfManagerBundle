@@ -1,0 +1,34 @@
+{% block docdigital_pdfinsert_widget %}
+    <div class="{{ form.vars.name }}" >
+        {{ form_widget(form) }}
+    </div>
+{{ addBlock(block('docdigital_pdfinsert_behavior')) }}
+{% endblock docdigital_pdfinsert_widget %}
+
+{% block docdigital_pdfinsert_behavior %}
+<script>
+    $(document).ready(function() {
+        var pdfInsertsDetail = $('form div[class="{{ form.vars.name }}"]');
+        pdfInsertsDetail.hide();
+        $('[type="file"]').on('change', function(e) {
+            var insertDetailDiv = $(e.target).closest('form').find('div[class="{{ form.vars.name }}"]');
+            if (!! e.target.value) {
+                insertDetailDiv.show();
+            } else {
+                insertDetailDiv.hide();
+            }
+        });
+        
+        var radios = pdfInsertsDetail.find('input[type="radio"]');
+        var pageNumber = pdfInsertsDetail.find('input[type="number"][name$="[pageNumber]"]').prop('disabled', 'disabled');
+        radios.on('change', function(e) {
+            var target = $(e.target);
+            if ('2' === target.val() && target.is(":checked")) {
+                pdfInsertsDetail.find('input[type="number"][name$="[pageNumber]"]').removeAttr('disabled');
+            } else {
+                pdfInsertsDetail.find('input[type="number"][name$="[pageNumber]"]').prop('disabled', 'disabled');
+            }
+        });
+    });
+</script>
+{% endblock docdigital_pdfinsert_behavior %}
